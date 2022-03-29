@@ -9,8 +9,8 @@ public class WithdrawlEventPublisher implements ApplicationEventPublisherAware  
 		this.publisher=publisher;
 		
 	}
-	public void publish(double accBalance,  BankAccount acc1) {
-		WithdrawlEvent event = new WithdrawlEvent(this,accBalance,acc1);
+	public void publish(double amount,  BankAccount acc1) {
+		WithdrawlEvent event = new WithdrawlEvent(this,amount,acc1);
 		this.publisher.publishEvent(event);
 	}
 }
