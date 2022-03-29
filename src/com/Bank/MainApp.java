@@ -9,7 +9,7 @@ public class MainApp {
 		 ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 		 WithdrawlEventPublisher publisher = (WithdrawlEventPublisher) context.getBean("customEventPublisher");
 		BankAccount acc1 = new SavingsAccount(101, "Kaif", 2000000);
-		double withdraw=acc1.withdraw(20000);
+		double withdraw=acc1.withdraw(300000);
 		publisher.publish(withdraw,acc1);
 	}
 
